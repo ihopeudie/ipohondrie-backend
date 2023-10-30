@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ipohondrie-backend
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
