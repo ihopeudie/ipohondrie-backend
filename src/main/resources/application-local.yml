@@ -1,6 +1,5 @@
 spring:
   datasource:
-    platform: postgres
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       max-lifetime: 300000
@@ -9,9 +8,6 @@ spring:
     password: dev
     url: jdbc:postgresql://localhost:5432/ipohondrie
     driver-class-name: org.postgresql.Driver
-  liquibase:
-    change-log: classpath:liquibase/changelog-master.xml
-    url: jdbc:postgresql://localhost:5432/ipohondrie
-    user: dev
-    password: dev
-    enabled: true
+  sql:
+    init:
+      platform: postgres
